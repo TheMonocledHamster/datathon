@@ -1,17 +1,9 @@
-from PIL import Image
 import matplotlib.pyplot as plt
 import csv
-import os
-
-
-# for i in range(100):
-#     im = Image.open("./data/train/train/{}.tif".format(i))
-#     im.save("./data/train/images/{}.png".format(i))
 
 
 ids, labels = [], []
 c = 0
-
 
 
 with open("./data/train_labels.csv", "r") as csv_file:
@@ -22,6 +14,7 @@ with open("./data/train_labels.csv", "r") as csv_file:
         labels.append(int(row[1]))
         if (c:=c+1) == 20:
             break
+
 
 # Sort 2 lists preserving the relationship
 indexes = list(range(len(labels)))
