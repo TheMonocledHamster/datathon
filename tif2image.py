@@ -18,4 +18,4 @@ with open("./data/train_labels.csv", "r") as csv_file:
 
 for i in range(RANGE):
     im = Image.open("./data/train/train/{}.tif".format(i))
-    im.save("./data/train/images/{}.png".format(str(i)+'_'+str(labels[i])))
+    im.save("./data/train/images/{}.png".format(str(labels[i])+'_'+str(i)))
